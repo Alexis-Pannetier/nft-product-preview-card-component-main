@@ -1,0 +1,240 @@
+:root {
+  --primary: hsl(215, 51%, 70%);
+  --secondary: hsl(178, 100%, 50%);
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-SemiBold.ttf");
+  font-weight: 700;
+}
+
+/* ELEMENTS */
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--dark-blue-main);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+footer {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  float: none;
+  margin: auto;
+  width: 100%;
+}
+
+h2,
+p,
+span {
+  font-family: "Outfit";
+}
+
+p,
+span {
+  color: var(--primary);
+}
+
+h2 {
+  letter-spacing: 0.05rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+a {
+  transition: color 0.3s ease-in-out;
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--dark-blue-line);
+  margin: 1em 0;
+}
+
+/* COMMUN */
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--dark-blue-card);
+  color: var(--white);
+  width: 100%;
+  max-width: 325px;
+  box-sizing: border-box;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  border-radius: 3rem;
+  z-index: -1;
+  background-color: #0c192c;
+  height: calc(100% + 6rem);
+  width: calc(100% + 5rem);
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  border-radius: 3rem;
+  z-index: -1;
+  background-color: #0c1729;
+  height: calc(100% + 1.5rem);
+  width: calc(100% + 2rem);
+}
+
+.card .illustration {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .illustration .photo {
+  display: block;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.card .illustration,
+.card .illustration .photo,
+.card .illustration .overlay {
+  border-radius: 0.5rem;
+}
+
+.card .illustration .overlay {
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  background-color: var(--secondary);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  opacity: 0;
+}
+
+.card .illustration:hover .overlay {
+  opacity: 0.5;
+}
+
+.card .illustration:hover .svg {
+  opacity: 1;
+}
+
+/* COLORS */
+.secondary {
+  color: var(--secondary);
+}
+
+.white {
+  color: var(--white);
+}
+
+/* IMAGES */
+.avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: solid 1px;
+  border-color: var(--white);
+  margin-right: 1rem;
+}
+
+.ethereum .svg {
+  height: 1.1rem;
+  width: 0.7rem;
+}
+
+.ethereum * {
+  color: var(--secondary);
+}
+
+.clock .svg,
+.ethereum .svg {
+  margin-right: 0.5rem;
+}
+
+.illustration .svg {
+  transition: all 0.3s ease-in-out;
+  color: var(--white);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+
+/* ATTRIBUTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.attribution a {
+  color: var(--white);
+}
