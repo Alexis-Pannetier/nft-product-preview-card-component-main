@@ -51,7 +51,7 @@ footer {
   width: 100%;
 }
 
-h2,
+h1,
 p,
 span {
   font-family: "Outfit";
@@ -62,8 +62,8 @@ span {
   color: var(--primary);
 }
 
-h2 {
-  letter-spacing: 0.05rem;
+h1 {
+  letter-spacing: 0.025rem;
   font-size: 1.3rem;
   font-weight: 700;
 }
