@@ -27,17 +27,17 @@ Users should be able to:
 
 #### Desktop
 
-![desktop](./demonstration/desktop.png)
+![desktop](./screenshot/desktop.png)
 
 #### Mobile
 
-![mobile](./demonstration/mobile.png)
+![mobile](./screenshot/mobile.png)
 
 </div>
 
 ### Links
 
-- Solution URL: [Demonstration](https://nft-product-preview-card-component.netlify.app/)
+- Solution URL: [Demonstration](https://pannetouch-nft-product-preview.netlify.app)
 
 ## My process
 
